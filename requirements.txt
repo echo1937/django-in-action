@@ -1,0 +1,4 @@
+Django == 3.2.5
+    # via Django
+mysqlclient >= 1.4
+    # via https://docs.djangoproject.com/en/3.2/ref/databases/#mysql-db-api-drivers
