@@ -2,3 +2,11 @@ Django == 3.2.5
     # via Django
 mysqlclient >= 1.4
     # via https://docs.djangoproject.com/en/3.2/ref/databases/#mysql-db-api-drivers
+djangorestframework == 3.13.1
+PyYAML >= 5.1
+uritemplate >= 3.0.0
+Markdown >= 3.0.0
+Pygments >= 2.4.0
+django-filter >= 1.0.1
+django-guardian >= 1.1.1
+    # via https://www.django-rest-framework.org/#requirements
