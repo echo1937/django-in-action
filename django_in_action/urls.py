@@ -22,7 +22,8 @@ from quickstart.urls import quickstart
 urlpatterns = [
     path('admin/', admin.site.urls),  # admin
     path('api-auth/', include('rest_framework.urls')),  # rest_framework
-    path('', include(quickstart.urls)),
+    # path('', include(quickstart.urls)),
+    path('', include('snippets.urls')),
     # simple JWT
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
