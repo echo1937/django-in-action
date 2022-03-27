@@ -15,16 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
-from quickstart.urls import quickstart
+from quickstart.urls import router as quickstart_router
+from snippets.urls import router as snippets_router
+
+router = routers.DefaultRouter()
+router.registry.extend(quickstart_router.registry)
+router.registry.extend(snippets_router.registry)
+# https://blog.csdn.net/weixin_43689950/article/details/115915788
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # admin
     path('api-auth/', include('rest_framework.urls')),  # rest_framework
+    path('', include(router.urls)),
     # path('', include(quickstart.urls)),
-    path('', include('snippets.urls')),
-    # simple JWT
+    # path('', include('snippets.urls')),
+    # ------------ simple JWT ------------
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),

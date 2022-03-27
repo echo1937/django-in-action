@@ -34,5 +34,9 @@ class SnippetViewSet(viewsets.ModelViewSet):
         snippet = self.get_object()
         return Response(snippet.highlighted)
 
+    # https://stackoverflow.com/questions/52551257/django-detailview-get-queryset-and-get-object
+    # https://www.django-rest-framework.org/api-guide/viewsets/#introspecting-viewset-actions
+    # https://www.django-rest-framework.org/tutorial/6-viewsets-and-routers/#refactoring-to-use-viewsets
+
     def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
+        serializer.save(owner=self.request.user)  # https://www.django-rest-framework.org/api-guide/serializers/#saving-instances

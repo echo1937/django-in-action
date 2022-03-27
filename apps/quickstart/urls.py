@@ -3,6 +3,8 @@ from rest_framework import routers
 from quickstart.views import UserViewSet, GroupViewSet
 
 # Wire up our API using automatic URL routing.
-quickstart = routers.DefaultRouter()
-quickstart.register(r'users', UserViewSet)
-quickstart.register(r'groups', GroupViewSet)
+router = routers.DefaultRouter()
+router.register(r'quickstart-users', UserViewSet, basename='other')
+router.register(r'groups', GroupViewSet)
+
+# https://www.django-rest-framework.org/api-guide/routers/#usage
