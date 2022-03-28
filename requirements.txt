@@ -12,3 +12,5 @@ django-guardian >= 1.1.1
     # via https://www.django-rest-framework.org/#requirements
 djangorestframework-simplejwt >= 5.1.0
     # https://www.django-rest-framework.org/api-guide/authentication/#json-web-token-authentication
+drf-spectacular >= 0.22.0
+    # https://drf-spectacular.readthedocs.io/en/latest/index.html#

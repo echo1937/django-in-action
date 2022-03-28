@@ -29,7 +29,7 @@ DEBUG = False
 ALLOWED_HOSTS = []
 
 # Application definition
-
+# https://stackoverflow.com/questions/47684387/what-is-the-purpose-of-adding-to-installed-apps-in-django
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    # 'rest_framework_simplejwt',
+    'rest_framework_simplejwt',  # If you wish to use localizations/translations
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
     # 'quickstart',
     'snippets',
 ]

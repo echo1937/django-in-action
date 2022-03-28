@@ -10,6 +10,8 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         extra_kwargs = {
             'url': {'view_name': 'other-detail', 'lookup_field': 'pk'}
         }
+        ref_name = 'quickstart_user'
+        # https://drf-spectacular.readthedocs.io/en/latest/drf_yasg.html#compatibility
 
     # https://www.django-rest-framework.org/api-guide/serializers/#hyperlinkedmodelserializer
     # https://stackoverflow.com/questions/66034534/how-can-i-change-hyperlinkedmodelserializers-default-pk-lookup-url-kwarg
