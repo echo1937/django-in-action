@@ -1,3 +1,9 @@
+from .settings import INSTALLED_APPS
+
+INSTALLED_APPS += [
+    # 'quickstart',
+    'snippets',
+]
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 

@@ -1,3 +1,10 @@
+from .settings import INSTALLED_APPS
+
+INSTALLED_APPS += [
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+]
+
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Django-In-Action APIs',
     'DESCRIPTION': 'Sane and flexible OpenAPI 3 schema generation for Django REST framework.',

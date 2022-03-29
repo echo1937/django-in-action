@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from rest_framework import routers
-from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView, TokenVerifyView
 
 from quickstart.urls import router as quickstart_router
 from snippets.urls import router as snippets_router
@@ -34,9 +33,10 @@ urlpatterns = [
     # path('', include(quickstart.urls)),
     # path('', include('snippets.urls')),
     # ------------ simple JWT ------------
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
+    path('dj-rest-auth/', include('dj_rest_auth.urls')),
 ]
 
 # https://drf-spectacular.readthedocs.io/en/latest/readme.html#take-it-for-a-spin

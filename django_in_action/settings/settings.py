@@ -37,12 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'rest_framework_simplejwt',  # If you wish to use localizations/translations
-    'drf_spectacular',
-    'drf_spectacular_sidecar',
-    # 'quickstart',
-    'snippets',
 ]
 
 MIDDLEWARE = [

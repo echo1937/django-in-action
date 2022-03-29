@@ -1,5 +1,11 @@
 from datetime import timedelta
-from .settings import SECRET_KEY
+
+from .settings import INSTALLED_APPS, SECRET_KEY
+
+INSTALLED_APPS += [
+    'rest_framework_simplejwt',  # If you wish to use localizations/translations
+    'rest_framework_simplejwt.token_blacklist',  # https://django-rest-framework-simplejwt.readthedocs.io/en/latest/blacklist_app.html
+]
 
 # https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html
 SIMPLE_JWT = {
