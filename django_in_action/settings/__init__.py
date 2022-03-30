@@ -1,3 +1,4 @@
+from .celery import *
 from .dj_rest_auth import *
 from .rest_framework import *
 from .settings import *

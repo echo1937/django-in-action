@@ -16,3 +16,5 @@ drf-spectacular >= 0.22.0
     # https://drf-spectacular.readthedocs.io/en/latest/index.html#
 dj-rest-auth >= 2.2.3
     # https://github.com/iMerica/dj-rest-auth
+celery ~= 5.2.3
+redis ~= 4.2.0
