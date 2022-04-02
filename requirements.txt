@@ -18,3 +18,8 @@ dj-rest-auth >= 2.2.3
     # https://github.com/iMerica/dj-rest-auth
 celery ~= 5.2.3
 redis ~= 4.2.0
+    # https://docs.celeryq.dev/en/stable/
+fabric >= 2.7
+    # https://docs.fabfile.org/en/stable/
+djangorestframework-yaml ~= 2.0.0
+    # https://www.django-rest-framework.org/api-guide/renderers/#third-party-packages

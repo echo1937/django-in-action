@@ -28,6 +28,8 @@ class SnippetViewSet(viewsets.ModelViewSet):
     serializer_class = SnippetSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly, IsOwnerOrReadOnly]
 
+    # 可以通过不同的renderer_classes返回不同的Content-Type
+    # https://www.django-rest-framework.org/api-guide/renderers/#third-party-packages
     @action(detail=True, renderer_classes=[renderers.StaticHTMLRenderer])
     def highlight(self, request, *args, **kwargs):
         snippet = self.get_object()
