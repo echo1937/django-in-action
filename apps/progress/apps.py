@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CeleryappConfig(AppConfig):
+class ProgressConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'celeryapp'
+    name = 'progress'

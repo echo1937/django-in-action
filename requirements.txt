@@ -23,3 +23,7 @@ fabric >= 2.7
     # https://docs.fabfile.org/en/stable/
 djangorestframework-yaml ~= 2.0.0
     # https://www.django-rest-framework.org/api-guide/renderers/#third-party-packages
+django-celery-results ~= 2.3.0
+psycopg2 ~= 2.9.3
+    # https://docs.celeryq.dev/en/stable/django/first-steps-with-django.html?highlight=django-db#extensions
+celery-progress ~= 0.1.2

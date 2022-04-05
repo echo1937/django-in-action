@@ -18,14 +18,12 @@ from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from rest_framework import routers
 
-from celeryapp.urls import router as celery_app_router
 from quickstart.urls import router as quickstart_router
 from snippets.urls import router as snippets_router
 
 router = routers.DefaultRouter()
 router.registry.extend(quickstart_router.registry)
 router.registry.extend(snippets_router.registry)
-router.registry.extend(celery_app_router.registry)
 # https://blog.csdn.net/weixin_43689950/article/details/115915788
 
 urlpatterns = [
@@ -48,4 +46,12 @@ urlpatterns += [
     # Optional UI:
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
+]
+
+# progress模块的路径
+from progress.views import display_progress
+
+urlpatterns += [
+    path('display_progress/', display_progress, name='display_progress'),
+    path('celery-progress/', include('celery_progress.urls'))
 ]
