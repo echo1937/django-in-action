@@ -16,9 +16,8 @@ drf-spectacular >= 0.22.0
     # https://drf-spectacular.readthedocs.io/en/latest/index.html#
 dj-rest-auth >= 2.2.3
     # https://github.com/iMerica/dj-rest-auth
-celery ~= 5.2.3
-redis ~= 4.2.0
-    # https://docs.celeryq.dev/en/stable/
+celery[redis] ~= 5.2.3
+    # https://docs.celeryq.dev/en/stable/getting-started/introduction.html#bundles
 fabric >= 2.7
     # https://docs.fabfile.org/en/stable/
 djangorestframework-yaml ~= 2.0.0
