@@ -32,10 +32,31 @@ PROFILE_TYPE = production 或者 PROFILE_TYPE = develop
 
 - 添加了celery_progress.py文件
 - 增加了progress, 以完成进度条功能(前端轮询方式)
-  - 只保留app、tasks、views
-  - 添加了display_progress.html模版, 修改了sittings.py中的模版位置
-  - 添加了urls路径
+    - 只保留app、tasks、views
+    - 添加了display_progress.html模版, 修改了sittings.py中的模版位置
+    - 添加了urls路径
 - 删掉了所有migrations(只保留init文件), 补充在.gitignore文件中
+
+## 6、2022-04-13 备注
+
+- [Serving static files during development](https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development)
+    - static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+        - 处于DEBUG = True
+        - 执行collectstatic发现并收集静态文件至STATIC_ROOT
+        - 提供对访问STATIC_ROOT目录下的静态文件的访问
+    - [How to make Django serve static files with Gunicorn?](https://stackoverflow.com/questions/12800862/how-to-make-django-serve-static-files-with-gunicorn)
+      - 分析static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)和staticfiles_urlpatterns()的不同作用
+
+## [cp_ws_project](https://github.com/echo1937/cp_ws_project)
+
+- An example project demonstrating the capabilities of celery-progress
+
+## [django-channels-tutorials](https://github.com/echo1937/django-channels-tutorials)
+
+- An example project of YouTube
+  playlist: [Django Channels tutorials, Django Real-time apps with WebSockets](https://www.youtube.com/playlist?list=PLe4mIUXfbIqYEOgfh4X_Yz767IntYUSvg)
+
+##  
 
 ### Extensions
 
