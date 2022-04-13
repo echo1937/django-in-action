@@ -242,5 +242,3 @@ cython_debug/
 /.idea/
 apps/*/migrations/*
 !apps/*/migrations/__init__.py
-/tmp/
-/utils/credentials.py
