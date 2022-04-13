@@ -47,11 +47,3 @@ urlpatterns += [
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/schema/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 ]
-
-# progress模块的路径
-from progress.views import display_progress
-
-urlpatterns += [
-    path('display_progress/', display_progress, name='display_progress'),
-    path('celery-progress/', include('celery_progress.urls'))
-]
