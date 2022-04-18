@@ -6,17 +6,6 @@ PROFILE_TYPE = production 或者 PROFILE_TYPE = develop
 
 建议每次都drop原有的表，再migrate
 
-### 3、2022-03-29 备注
-
-- simplejwt开启了blacklist app
-- dj-rest-auth接口
-    - logout接口需要打开blacklist或者cookie
-    - password的reset和reset confirm接口需要发送邮件
-    - user put/patch接口支持的字段有问题
-- dj-rest-auth增强
-    - user profile接口的增强
-    - 如何支持除账号密码之外的登陆方式
-
 ## 6、2022-04-13 备注
 
 - [Serving static files during development](https://docs.djangoproject.com/en/3.2/howto/static-files/#serving-static-files-during-development)
@@ -30,6 +19,17 @@ PROFILE_TYPE = production 或者 PROFILE_TYPE = develop
 - [How to make Django serve static files with Gunicorn?](https://stackoverflow.com/questions/12800862/how-to-make-django-serve-static-files-with-gunicorn)
     - 分析static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)和staticfiles_urlpatterns()的不同作用
 
+## [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/)
+
+- dj-rest-auth接口
+    - logout接口需要打开blacklist或者cookie
+    - password的reset和reset confirm接口需要发送邮件
+    - user put/patch接口支持的字段有问题
+- dj-rest-auth增强
+    - user profile接口的增强
+    - 如何支持除账号密码之外的登陆方式
+- simplejwt开启了blacklist app
+
 ## [cp_ws_project](https://github.com/echo1937/cp_ws_project)
 
 - An example project demonstrating the capabilities of celery-progress
@@ -39,7 +39,7 @@ PROFILE_TYPE = production 或者 PROFILE_TYPE = develop
 - An example project of YouTube
   playlist: [Django Channels tutorials, Django Real-time apps with WebSockets](https://www.youtube.com/playlist?list=PLe4mIUXfbIqYEOgfh4X_Yz767IntYUSvg)
 
-##     
+##         
 
 ### Extensions
 
